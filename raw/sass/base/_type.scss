@@ -1,0 +1,119 @@
+//------------------------------------
+//  TYPOGRAPHY
+//------------------------------------
+
+
+// typekit usage
+// regular: "ff-good-headline-web-pro-con" 400 normal/italic
+// bold: "ff-good-headline-web-pro-con" 900 normal/italic
+$brand_header_font: "Oswald", "Helvetica-Neue", "Helvetica", "Arial", sans-serif;
+$brand_alternate_font: 'Libre Baskerville', serif;
+
+// typekit usage
+// regular: "proxima-nova-alt-condensed" 400 normal/italic
+// bold: "proxima-nova-alt-condensed" 700 normal/italic
+$brand_body_font: "proxima-nova-alt-condensed", "Helvetica-Neue", "Helvetica", "Arial", sans-serif;
+
+
+// DOUBLE STRANDED HEADING HIERARCHY
+// @ref: http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/
+
+// Extra large font sizes
+// $giga_font_size: rem-calc(85);
+// $mega_font_size: rem-calc(72);
+// $kilo_font_size: rem-calc(48);
+
+// Primary sizes (above won't be used on all projects)
+$alpha_font_size: rem-calc(44);
+$beta_font_size: rem-calc(37);
+$gamma_font_size: rem-calc(27);
+$delta_font_size: rem-calc(23);
+$epsilon_font_size: rem-calc(18);
+$zeta_font_size: 1rem;
+
+// Tiny font sizes
+// $milli_font_size: rem-calc(12);
+// $micro_font_size: rem-calc(10);
+
+
+// FOUNDATION VARIABLES
+// We use these to control header font sizes in Foundation
+$h1-font-size: $alpha_font_size;
+$h2-font-size: $beta_font_size;
+$h3-font-size: $gamma_font_size;
+$h4-font-size: $delta_font_size;
+$h5-font-size: $epsilon_font_size;
+$h6-font-size: $zeta_font_size;
+
+// Font Defaults
+$body-font-family: $brand_body_font;
+$header-font-family: $brand_header_font;
+
+h1.main-title{
+  font-family: $brand_header_font;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 5rem;
+  color: $black;
+  span{
+    margin-top: 10px;
+    font-family: $brand_alternate_font;
+    font-style: italic;
+    display: block;
+    font-weight: normal;
+    font-size: 8rem;
+    line-height: 1;
+    background: linear-gradient(45deg,  rgba(223,182,103,1) 0%,#E3B258 56%,rgba(231,192,116,1) 96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-mask-image: url(../images/foil.png);
+    -webkit-transform: rotate(-4deg);
+    -moz-mask-image: url(../images/foil.png);
+    -moz-transform: rotate(-4deg);
+    -o-mask-image: url(../images/foil.png);
+    mask-image: url(../images/foil.png);
+    -o-transform: rotate(-4deg);
+  }
+}
+
+h1.light-heading{
+  font-family: $brand_header_font;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 2.75rem;
+  color: white;
+}
+
+h1.dark-heading, .date-title{
+  font-family: $brand_header_font;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 2.75rem;
+  color: $black;
+}
+
+.location-title{
+  font-family: $brand_header_font;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 1.5rem;
+  color: $black;
+}
+
+.date-title{
+  margin-top: 2rem;
+}
+
+h2.event-details{
+  font-family: $brand_header_font;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 1.875rem;
+  color: white;
+  margin-top: 1rem;
+}

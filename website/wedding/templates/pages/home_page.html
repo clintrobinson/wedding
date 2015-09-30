@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static wagtailcore_tags wagtailimages_tags  %}
+
+
+{% block body_class %}home{% endblock body_class %}
+{% block js_class %}home{% endblock js_class %}
+
+
+{% block main %}
+<section class="hero">
+	<div class="row">
+		<div class="home-content">
+	  	<h1 class="main-title">Brittany<span>&</span>Clint</h1>
+	  	<h2 class="date-title">31.12.2015</h2>
+	  	<h3 class="location-title">Southwood Community League • Edmonton, Alberta</h3>
+		</div>
+	</div>
+</section>
+<section class="featured">
+	<div class="row">
+		<h1 class="light-heading">Wedding Details</h1>
+		{% for item in self.feature_items.all  %}
+			<div class="feature">
+				{% image item.image width-400 as feature_photo %}
+
+				<img src="{{ feature_photo.url }}"/>
+				<h2 class="event-details">{{ item.title }}</h2>
+				{{ item.description|richtext }}
+			</div>
+		{% endfor %}
+	</div>
+</section>
+
+<section class="Events">
+	<div class="row">
+		<h1 class="light-heading">Wedding Details</h1>
+			{% for item in self.detail_items.all  %}
+			<div class="feature">
+				<i class="fa fa-camera-retro fa-5x"></i>
+				<h2 class="event-details">{{ item.title }}</h2>
+				{{ item.description|richtext }}
+			</div>
+			
+			{% endfor %}
+	</div>
+</section>
+{% endblock main %}

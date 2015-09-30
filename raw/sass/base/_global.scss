@@ -1,0 +1,14 @@
+//-----------------------------------------------------------
+// GLOBAL
+//-----------------------------------------------------------
+a{ @include transition(color 0.35s, background-color 0.35s); }
+
+img{ max-width: 100%; }
+
+// In case someone is on IE8 or lower
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}

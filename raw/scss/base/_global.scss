@@ -1,0 +1,20 @@
+body{
+  -webkit-animation: bugfix infinite 1s;
+}
+
+// Fix checkboxes on Android
+// @ref: http://timpietrusky.com/advanced-checkbox-hack
+@-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} }
+
+// In case someone is on IE8 or lower
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+// set default animation for all link tags
+a{ @extend %default-transition; }
+
+section{ text-align: center;}

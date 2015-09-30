@@ -1,0 +1,138 @@
+//
+// MODULES
+//
+
+@import "hero";
+@import "forms";
+@import "socialFeed";
+
+@import "richtext";
+
+img{
+	max-width: 100%;
+}
+
+.featured{
+	padding: 5rem 0;
+	background: white;
+}
+
+.row{
+	@include outer-container();
+	padding: 0 1rem;
+}
+
+.home-content{
+	@include span-columns(12);
+}
+
+.sidebar{
+	@include span-columns(4);
+}
+
+.feature{
+	@include span-columns(4);
+}
+
+.featured{
+	background: $black;
+	color: white;
+	text-align: center;
+}
+
+.form-section{
+	padding: 5rem 0;
+	background: #eee;
+}
+
+.l-siteContainer{
+  margin: 50px;
+  box-shadow: 0px 0px 2px 2px rgba(darken(#BF9657, 20%),.3);
+}
+
+body{
+	background: url('../images/foil.jpg') center center repeat fixed;
+	-webkit-background-size: cover;
+  background-size: cover;
+}
+
+.Events{
+  background: $black;
+  padding: 4rem 0;
+  color: white;
+  text-align: center;
+  .fa{
+    position: relative;
+    text-align: center;
+    &:before{
+      position: relative;
+      z-index: 4;
+    }
+    &:after{
+      @include transform(translateX(-25%));
+      position:absolute;
+      content: "";
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      display: block;
+      background: #ffd65e; /* Old browsers */
+      background: url('../images/foil.jpg')
+
+    }
+    padding-top: 2rem;
+    color: $black;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+  }
+}
+
+.Info{
+  background: $black;
+  padding: 4rem 0;
+  color: white;
+  text-align: center;
+  .fa{
+
+    position: relative;
+    text-align: center;
+    &:before{
+      position: relative;
+      z-index: 4;
+    }
+    &:after{
+      @include transform(translateX(-25%));
+      position:absolute;
+      content: "";
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      display: block;
+      background: #ffd65e; /* Old browsers */
+      background: url('../images/foil.jpg');
+      box-shadow: inset 0px 0px 2px 0px rgba(darken(#BF9657, 20%),.8);
+    }
+    padding-top: 2rem;
+    color: $black;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+  }
+}
+
+.rsvp{
+  background: white;
+  padding: 4rem 0;
+  color: $black;
+  text-align: center;
+}
+
+.Feed{
+  padding: 4rem 0;
+  background: white;
+}

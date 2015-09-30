@@ -1,0 +1,16 @@
+/**
+ * DEFAULTS
+ * -----------------------------------------------------------
+ * Default variables and styles that should cascade throughout
+ * the entire project
+ */
+
+$body-bg: #fff;
+
+// Keep border radius the same across the project
+$global-radius: 3px;
+
+// We use these to style anchors
+$anchor-text-decoration: none;
+$anchor-font-color: $primary-color;
+$anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);

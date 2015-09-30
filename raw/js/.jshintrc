@@ -1,0 +1,31 @@
+
+// see http://www.jshint.com/docs/options/
+
+{
+    "asi": true,            // suppress warnings about missing semicolons
+    "node": true,           // defines globals available when your code is running inside of the Node runtime environment
+    "esnext": true,         // tells JSHint that we are using ECMAScript 6 syntax
+    "bitwise": true,        // prevent bitwise operators (very rare in javascript, ie. & vs && )
+    "camelcase": true,      // force variable names to use camelCase or UPPER_CASE
+    "curly": true,          // force curcly braces around blocks in loops/conditionals
+    "eqeqeq": true,         // prohibit use of == or != in favor of === and !==
+    "immed": true,          // prohibit use of immediate function invocations without wrapping them in parentheses
+    "indent": 2,            // enforce specific tab width (should already be enforced by editorconfig but safe to double-check)
+    "latedef": true,        // prohibit use of variable before it was defined
+    "newcap": true,         // require capitalization on names of constructor functions
+    "noarg": true,          // prohibit use of arguments.caller and arguments.callee (deprecated functionality)
+    "quotmark": "single",   // enforce consistency of quotation marks
+    "undef": true,          // prohibit use of explicitly undeclared variables
+    "strict": true,         // requires all functions to run in ECMAScript 5's strict mode (eliminates JS pitfalls)
+    "trailing": true,       // prohibit trailing whitespace
+    "smarttabs": true,      // suppresses warnings about mixed tabs and spaces when the latter are used for alignmnent only
+    "white": true,          // check source code against Douglas Crockford's JavaScript coding style
+    "sub": true,            // suppress warnings about using [] instead of dot notation (ie. person['name'] vs person.name)
+    "eqnull": true,         // suppress warnings about -- null comparisons
+    "browser": true,        // defines globals exposed by modern browsers
+    "laxcomma": true,       // suppress warnings about comma-first coding style
+    "globals": {            // global variables that come from other areas, suppress warnings when any in the following list are used
+        "console": true,
+        "jQuery": true
+    }
+}

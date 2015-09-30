@@ -1,0 +1,15 @@
+//------------------------------------
+//  PLACEHOLDERS
+//------------------------------------
+
+// SASS Placeholders make it elegant for
+// maintaining consistent usage of styles
+// throughout numerous elements.
+// @usage: .selection{ @extend %PLACEHOLDER; }
+// @ref: http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholder_selectors_
+
+@import "padding";
+@import "margin";
+@import "animation";
+@import "type";
+@import "utilities";

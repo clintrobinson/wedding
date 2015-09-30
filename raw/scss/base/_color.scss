@@ -1,0 +1,34 @@
+/**
+ * BRAND
+ * -----------------------------------------------------------
+ * Colors specific to this project
+ */
+
+// Primary Brand Colors
+$yellow: #F0D896;
+$orange: #F4AA89;
+$red: #E68C8B;
+$teal: #58A6A2;
+$green: #B1CEAE;
+
+// Secondary Brand Colors (tints/shades)
+$lt_teal: #9CC8C5;
+$md_teal: darken($teal,10%);
+$dk_teal: darken($teal, 15%);
+
+// L1F7 Default Colors (general use across projects)
+$black: #000;
+$dkshade: #555;
+$meddkshade: #888;
+$medshade: #bbb;
+$medltshade: #ddd;
+$ltshade: #f2f2f2;
+$white: #fff;
+
+// Foundation Vars
+$primary-color: #008CBA;
+$secondary-color: #e7e7e7;
+$alert-color: #f04124;
+$success-color: #43AC6A;
+$warning-color: #f08a24;
+$info-color: #a0d3e8;

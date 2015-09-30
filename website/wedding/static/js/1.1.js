@@ -1,0 +1,1 @@
+webpackJsonp([1],{3:function(e,t){"use strict";e.exports={init:function(){console.log("feed view initialized")}}}});

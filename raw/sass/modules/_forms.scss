@@ -1,0 +1,51 @@
+//
+// Forms
+//
+
+label {
+  font-size:11px;
+  color:$black;
+  transition: all 0.1s linear;
+  opacity:1;
+  font-weight: bold;
+}
+
+input[type="text"],textarea {
+  border: none;
+  padding: 2px 7px 0px;
+  margin-bottom: 15px;
+  height: 30px;
+  background: #efefef;
+  box-shadow: none;
+  &:focus{
+    background: #ddd;
+    box-shadow: none;
+  }
+}
+::-webkit-input-placeholder {
+  font-size:11px;
+  color:$black;
+  font-weight: bold;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  font-size:11px;
+  color:$black;
+  font-weight: bold;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  font-size:11px;
+  color:$black;
+  font-weight: bold;
+}
+
+:-ms-input-placeholder {
+  font-size:11px;
+  color:$black;
+  font-weight: bold;
+}
+
+.guestfield{
+  display: none;
+}

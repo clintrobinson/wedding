@@ -1,0 +1,4 @@
+
+// Animation
+%default-transition {@include transition(all .25s ease-out);}
+%no-transition{@include transition(none);}

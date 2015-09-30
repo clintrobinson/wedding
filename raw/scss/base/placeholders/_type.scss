@@ -1,0 +1,58 @@
+// Type Utilities
+%ttu { text-transform: uppercase; }
+%ttl { text-transform: lowercase; }
+%tac { text-align: center; }
+%tal { text-align: left; }
+%tar { text-align: right; }
+
+// Smooth Anti-aliasing of fonts
+// @ref: http://stackoverflow.com/questions/15182997/font-smoothing-in-firefox
+%smooth_fonts{
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+// Make it easy to use our font sizes throughout the site
+// %giga{font-size: $giga_font_size;}
+// .giga{ @extend %giga; }
+
+// %mega{font-size: $mega_font_size;}
+// .mega{ @extend %mega; }
+
+// %kilo{font-size: $kilo_font_size;}
+// .kilo{ @extend %kilo; }
+
+// 40 pt
+%alpha{font-size: $alpha_font_size;}
+.alpha, h1{ @extend %alpha; }
+
+// 36 pt
+%beta{font-size: $beta_font_size;}
+.beta, h2{ @extend %beta; }
+
+// 30 pt
+%gamma{font-size: $gamma_font_size;}
+.gamma, h3{ @extend %gamma; }
+
+// 24 pt
+%delta{font-size: $delta_font_size;}
+.delta, h4{ @extend %delta; }
+
+// 18 pt
+%epsilon{font-size: $epsilon_font_size;}
+.epsilon, h5{ @extend %epsilon; }
+
+// 16 pt
+%zeta{font-size: $zeta_font_size;}
+.zeta, h6{ @extend %zeta; }
+
+// %milli{font-size: $milli_font_size;}
+// .milli{ @extend %milli; }
+
+// %micro{font-size: $micro_font_size;}
+// .micro{ @extend %micro; }
+
+h1,h2,h3,h4,h5,h6,p,span,li,blockquote,a{
+  @extend %smooth_fonts;
+}

@@ -1,0 +1,25 @@
+//---------------------------------
+// btn
+//---------------------------------
+
+.btn{
+  display: inline-block;
+  padding: 15px 25px;
+  text-transform: uppercase;
+  background-color: $black;
+  color: #fff;
+  &:hover{
+    color: #fff;
+    background-color: darken($black,10%);
+  }
+}
+
+
+.btn--small{
+  padding: 10px 15px;
+}
+
+.btn--large{
+  @extend %epsilon;
+  padding: 25px 35px;
+}

@@ -1,0 +1,20 @@
+{% load posts_tags %}
+<div id="fitb" class="field {% if not field.value %}is-hidden{% endif %}">
+  <div class="fitb">
+    <span id="fitb-text" class="fitb-text">
+      {% if post_type == "request" %}I'm looking for{% endif %}
+      {% if post_type == "offer" %}I'm offering{% endif %}
+      {% if post_type == "kudos" %}I want to give thanks to{% endif %}
+      {% if post_type == "message" %}{% endif %}
+    </span>
+    <input id="{{ field.id_for_label }}" class="fitb-input" name="{{ field.html_name }}" type="text" value="{{ field.value|cut_default_prefix }}"/>
+    <span class="fitb-text">.</span>
+  </div>
+
+  {% if field.errors %}
+    <p class="error error--field">{{ field.errors.as_text }}</p>
+  {% endif %}
+  {% if field.help_text %}
+    <p class="field-helptext">{{ field.help_text }}</p>
+  {% endif %}
+</div>

@@ -1,0 +1,23 @@
+//-----------------------------------------------------------
+// COLOR
+//-----------------------------------------------------------
+// Colors specific to this project
+
+//
+// Primary Brand Colors
+// ------------------------------------------
+$white             : #ffffff;
+$black             : #333333;
+
+$blue              : #5198FB;
+  $blue-t-10       : mix($blue, $white, 10%);
+  $blue-t-20       : mix($blue, $white, 20%);
+  $blue-t-30       : mix($blue, $white, 30%);
+  $blue-t-40       : mix($blue, $white, 40%);
+  $blue-t-50       : mix($blue, $white, 50%);
+
+
+$base-heading       : darken(#586375, 5%);
+$base-type          : darken(#848B97, 5%);
+$base-type-light    : lighten(#848B97,10%);
+$base-border        : #E4E1E9;

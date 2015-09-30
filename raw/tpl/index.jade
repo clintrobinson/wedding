@@ -1,0 +1,75 @@
+
+extend _base
+
+block content
+  .l-site
+    section.Hero
+      .row
+        .column.small-12.text-center
+          h1.main-title Brittany
+            span &
+            | Clint
+          h2.date-title 31.12.2015
+          h3.location-title Southwood Community League • Edmonton, Alberta
+    section.Events.text-center
+      .row
+        .large-9.large-centered.columns
+          h1.light-heading Wedding Details
+          p.lead Nullam cursus lacinia erat. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Cras ultricies mi eu turpis hendrerit fringilla. Nam eget dui. Sed fringilla mauris sit amet nibh.
+      .row
+        .column.small-12.medium-4
+          i.fa.fa-building-o.fa-5x
+          h2.event-details Wedding
+          p Duis leo. Fusce vulputate eleifend sapien. Cras dapibus. Vestibulum eu odio. Morbi ac felis.
+        .column.small-12.medium-4
+          i.fa.fa-glass.fa-5x
+          h2.event-details Cocktails
+          p Duis leo. Fusce vulputate eleifend sapien. Cras dapibus. Vestibulum eu odio. Morbi ac felis.
+        .column.small-12.medium-4
+          i.fa.fa-music.fa-5x
+          h2.event-details Reception/Dance
+          p Duis leo. Fusce vulputate eleifend sapien. Cras dapibus. Vestibulum eu odio. Morbi ac felis.
+    section.rsvp.text-center
+      .row
+        .large-6.large-centered.small-12.medium-8.medium-centered.columns
+          h1.dark-heading RSVP
+          form
+            .row.text-left
+              .large-12.columns.text-field
+                label Name
+                input(type="text",placeholder="Name",class="attend_name")
+              .large-12.columns.radio-button
+                label Will you be attending?
+                input(type="radio",name="attending",value="Yes",id="Yes")
+                label(for="Yes") Yes
+                input(type="radio",name="attending",value="No",id="No")
+                label(for="No") No
+              .large-12.columns.text-field.guestfield
+                label Guest Name
+                input(type="text",placeholder="Guest",class="guest_name")
+              .large-12.columns
+                .btn.btn-primary.btn--small Send
+
+    section.Info.text-center
+      .row
+        .large-9.large-centered.columns
+          h1.light-heading Info
+          p.lead Nullam cursus lacinia erat. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Cras ultricies mi eu turpis hendrerit fringilla. Nam eget dui. Sed fringilla mauris sit amet nibh.
+      .row
+        .column.small-12.medium-4
+          i.fa.fa-bed.fa-5x
+          h2.event-details Hotel
+          p Duis leo. Fusce vulputate eleifend sapien. Cras dapibus. Vestibulum eu odio. Morbi ac felis.
+        .column.small-12.medium-4
+          i.fa.fa-pencil-square-o.fa-5x
+          h2.event-details Registry
+          p Duis leo. Fusce vulputate eleifend sapien. Cras dapibus. Vestibulum eu odio. Morbi ac felis.
+        .column.small-12.medium-4
+          i.fa.fa-gift.fa-5x
+          h2.event-details Gift Opening
+          p Duis leo. Fusce vulputate eleifend sapien. Cras dapibus. Vestibulum eu odio. Morbi ac felis.
+    section.Feed
+      .row
+        .column.small-12.large-6.large-centered.medium-8.medium-centered
+          h1.dark-heading.text-center Feed
+          .social-feed-container

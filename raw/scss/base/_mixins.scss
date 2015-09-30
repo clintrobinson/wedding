@@ -1,0 +1,8 @@
+//------------------------------------
+//  MIXINS
+//------------------------------------
+
+// I'm lazy and hate typing dashes
+@function remcalc($values){
+  @return rem-calc($values);
+}

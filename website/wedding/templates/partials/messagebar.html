@@ -1,0 +1,16 @@
+{% comment %}
+This may need to change if you're not using Mezzanine
+{% load mezzanine_tags %}
+<div class="l-messagebar">
+  {% nevercache %}
+    {% for message in messages %}
+      <div class="alert {% if message.tags %}alert--{{ message.tags }}{% endif %}">
+        <div class="alert-container">
+          <div class="alert-close ts-bold js-alert-close">×</div>
+          <p class="alert-text">{{ message }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  {% endnevercache %}
+</div>
+{% endcomment %}

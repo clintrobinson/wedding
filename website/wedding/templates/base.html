@@ -1,0 +1,138 @@
+{% load static wagtailcore_tags %}
+
+
+
+
+
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  {% comment %}
+    http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e
+  {% endcomment %}
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Set the viewport width to device width for mobile -->
+
+  <title>Brittany and Clint</title>
+  <meta name="description" content="{{ meta_description }}" />
+
+  {% comment %}
+  For full details, and understanding what you do or do
+  not need from this, visit: http://moz.com/blog/meta-data-templates-123
+  (they also have a full product template for this meta data as well).
+  {% endcomment %}
+
+  <!-- Open Graph data (the book of faces and pinterest) -->
+  <meta property="og:title" content="{{ meta_title }}" />
+  <meta property="og:type" content="{{ og_type }}" />
+  <meta property="og:url" content="{{ og_url }}" />
+  <meta property="og:image" content="{{ meta_image }}" />
+  <meta property="og:description" content="{{ meta_description }}" />
+  <meta property="og:site_name" content="@TODO: SITE NAME, IE. Lift Interactive" />
+
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="{{ meta_title }}">
+  <meta itemprop="description" content="{{ meta_description }}">
+  <meta itemprop="image" content="{{ meta_image }}">
+
+  {% comment %}
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="TODO: @publisher_handle">
+  <meta name="twitter:title" content="{{ meta_title }}">
+  <meta name="twitter:description" content="{{ meta_description }}">
+  <meta name="twitter:creator" content="@author_handle">
+  <!-- Twitter summary card with large image must be at least 280x150px -->
+  <meta name="twitter:image:src" content="{{ meta_image }}">
+  {% endcomment %}
+
+  {% block extra_meta %}{% endblock extra_meta %}
+
+  <link rel="stylesheet" href="{{STATIC_URL}}css/main.min.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Oswald:400,700:latin', 'Libre+Baskerville:400,400italic:latin', 'Droid+Sans::latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+  <script src="{% static "js/modernizr.js" %}"></script>
+
+  <link rel="icon" href="{{STATIC_URL}}images/favicon.ico" type="image/x-icon"/>
+  <!--[if IE]><link rel="shortcut icon" href="{{STATIC_URL}}images/favicon.ico"><![endif]-->
+
+  <script src="https://use.typekit.net/#######.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+  <!--[if lt IE 9]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+  <div data-model="{% block js_class %}home{% endblock js_class %}" class="main-block {% block body_class %}home{% endblock body_class %} site l-sitewrap">
+    
+  </div>
+  <div class="l-siteContainer">
+    {% include "includes/site_header.html" %}
+
+    {% comment %}
+      "Messages" are system messages like successfully logged in,
+      logged out, etc.
+    {% endcomment %}
+    {% if messages %}
+      {% include "partials/messagebar.html" %}
+    {% endif %}
+
+    <div class="l-pageContainer">
+        
+      {% block main %}
+      {% endblock main %}
+      <section class="form-section">
+        <div class="row">
+          <div id="results"></div>
+        </div>
+      </section>
+      {% include "includes/site_footer.html" %}
+    </div>
+  </div>
+
+  {% comment %}
+    The modals block is used for printing view-specific modals
+    to the page. Not necessarily needed for every project, but
+    included just in case.
+  {% endcomment %}
+  {% block modals %}{% endblock modals %}
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="{% static "js/app.js" %}"></script>
+  <script>
+    $.ajax({
+      url: "form",
+      cache: false
+    })
+    .done(function( html ) {
+      $( "#results" ).append( html );
+    });
+  </script>
+  {% comment %}
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-########-#', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+  </script>
+  {% endcomment %}
+</body>
+</html>
