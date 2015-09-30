@@ -43,7 +43,4 @@ node_modules
 raw/bower
 .sass-cache
 
-website/wedding/wedding/settings/dev.py
-website/wedding/wedding/settings/production.py
-website/wedding/wedding/settings/settings_base.py
 website/wedding/media/*
